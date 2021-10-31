@@ -1,17 +1,16 @@
-function is_power_of_two ()
-
-{
-
-declare -i n=$1
-
-(( n > 0 && ( n & ( n - 1 )) == 0 ))
-
-}
-for number;
-do
-if is_power_of_two "$number";
-then
-
-echo "$number"
-fi
-done
+#!/bin/bash
+echo -n "Enter number : "
+read digit
+case $digit in
+        0) echo -n "zero " ;;
+        1) echo -n "one " ;;
+        2) echo -n "two " ;;
+        3) echo -n "three " ;;
+        4) echo -n "four " ;;
+        5) echo -n "five " ;;
+        6) echo -n "six " ;;
+        7) echo -n "seven " ;;
+        8) echo -n "eight " ;;
+        9) echo -n "nine " ;;
+	*) echo "$digit is not single digit number"
+esac

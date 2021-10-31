@@ -1,26 +1,13 @@
 #!/bin/bash
-echo "Enter a Number"
-
-read number
-i=1
-
-while [ $i -le 100 ]
-
-do 
-echo $i
-
-i=$(($i+1))
-done
-
-if [ $number -lt 2 ]
-then
-
-Echo "Number is less"
-
-elif [ $number -gt 2 ]
-then
-echo "Number is greater"
-
-else
-echo "Neither greater Nor less"
-fi 
+echo -n "Enter number : "
+read digit
+case $digit in
+        0) echo -n "sunday " ;;
+        1) echo -n "monday " ;;
+        2) echo -n "tuesday " ;;
+        3) echo -n "Wednesday " ;;
+        4) echo -n "Thursday " ;;
+        5) echo -n "Friday " ;;
+        6) echo -n "Saturday " ;;
+	*) echo "$digit is not a week day"
+esac
