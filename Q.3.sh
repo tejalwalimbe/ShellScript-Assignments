@@ -1,26 +1,13 @@
 #!/bin/bash
-
-counter=1
-
-coin=RANDOM
-heads=0
-tails=0
-
-while [ $counter -le 11 ]
-	if coin == 1
-echo "heads"
-
-	heads += 1
-	counter +=1
-'elif coin== 2'
-echo "tails"
-	tails +=1
-	counter +=1
-
-echo "$heads and $tails"
-
-	echo $counter
-	counter=$(( $counter + 1 ))
-
-
-echo "Exit"
+echo -n "Enter number : "
+read digit
+case $digit in
+        1) echo "unit" ;;
+        10) echo "ten" ;;
+        100) echo "hundred " ;;
+        1000) echo "thousend " ;;
+        10000) echo "ten thousend " ;;
+        100000) echo "one lakh " ;;
+        1000000) echo "ten lakh " ;;
+	*) echo "$digit is not in the data"
+esac
