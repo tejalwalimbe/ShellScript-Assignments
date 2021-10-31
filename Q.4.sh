@@ -1,22 +1,16 @@
 #!/bin/bash
-
-echo "Enter the number: "
-read n
-
-for (( i=2 ; i<=n ; i++))
-do
- 	f=1
-	for (( j=2 ; j<i ; j++))
-        do
-        	res=$(($i%$j))
-         	if [ $res -eq 0 ]
-		then
-            		f=0
-            		break
-         	fi
-    	done
-        if [ $f -eq 1 ]
-	then
-        	echo  " $i "
-        fi
-done
+echo  "Enter which operation want to perform : "
+echo "1. Feet to Inch"
+echo "2. Feet to Meter"
+echo "3. Inch to Feet"
+echo "4. Meter to Feet"
+read num
+echo " enter value"
+read val
+case $num in
+        1) echo "$(( $val * 12 ))" ;;
+        2) echo "$(( $val / 3 ))";;
+        3) echo "$(( $val / 12 ))" ;;
+        4) echo "$(( $val * 3 ))" ;;
+	*) echo "$digit is not any operation "
+esac
